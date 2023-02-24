@@ -3,7 +3,8 @@ import styles from '@/styles/Home.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 import { getAllPostsData, IPostCardData } from '@/lib/posts'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
+import { useThemeContext } from '@/components/layout'
 
 export async function getStaticProps() {
   const postsData: IPostCardData[] = await getAllPostsData();
@@ -19,13 +20,7 @@ export async function getStaticProps() {
 
 export default function Home({ postsData }: { postsData: IPostCardData[] }) {
 
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
-
-  const toggleDarkMode = (event: React.MouseEvent<HTMLButtonElement>) => {
-    event.preventDefault();
-
-    setIsDarkMode(!isDarkMode);
-  }
+  const isThemeDark = useThemeContext();
 
   return (
     <>
@@ -35,11 +30,10 @@ export default function Home({ postsData }: { postsData: IPostCardData[] }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={isDarkMode ? styles.dark : styles.white}>
-        <button type="button" onClick={toggleDarkMode}>Dark mode (Test)</button>
+      <div className={isThemeDark ? styles.dark : styles.white}>
         <div className={styles.profile}>
           <Image 
-            src={isDarkMode ? "/github-mark-white.svg" : "/github-mark.svg"}
+            src={isThemeDark ? "/github-mark-white.svg" : "/github-mark.svg"}
             alt="err"
             width={200}
             height={200}
@@ -57,7 +51,7 @@ export default function Home({ postsData }: { postsData: IPostCardData[] }) {
               rel="noopener noreferrer"
             >
               <Image 
-                src={isDarkMode ? "/github-mark-white.svg" : "/github-mark.svg"}
+                src={isThemeDark ? "/github-mark-white.svg" : "/github-mark.svg"}
                 alt="err"
                 width={20}
                 height={20}

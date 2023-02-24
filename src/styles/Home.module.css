@@ -1,8 +1,5 @@
 .white {
-  background-color: white;
-  color: black;
-  min-height: 100vh;
-  transition: 0.5s;
+  color-scheme: white;
 }
 
 .profile {
@@ -96,10 +93,7 @@
 
 /* Dark Mode */
 .dark {
-  background-color: rgb(35, 35, 35);
-  color: white;
-  min-height: 100vh;
-  transition: 0.5s;
+  color-scheme: dark;
 }
 
 .dark .grid a {

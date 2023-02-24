@@ -1,0 +1,15 @@
+.layoutDark {
+  min-height: 100vh;
+  color-scheme: dark;
+  background-color: rgb(35, 35, 35);
+  color: white;
+  transition: 0.5s;
+}
+
+.layoutWhite {
+  min-height: 100vh;
+  color-scheme: white;
+  background-color: white;
+  color: black;
+  transition: 0.5s;
+}
