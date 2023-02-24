@@ -42,7 +42,7 @@ export default function Home({ postsData }: { postsData: IPostCardData[] }) {
             Like a Diamond
           </h1>
           <article>
-            HENOZIWD's personal page.
+            HENOZIWD&apos;s personal page.
           </article>
           <div>
             <Link

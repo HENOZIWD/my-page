@@ -32,7 +32,9 @@ export default function Post(postData: IPostData) {
       <div className={styles.title}>
         {postData.title}
       </div>
-      <ReactMarkdown children={postData.content} />
+      <ReactMarkdown>
+        {postData.content}
+      </ReactMarkdown>
     </div>
   )
 }
