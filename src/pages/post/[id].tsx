@@ -32,6 +32,9 @@ export default function Post(postData: IPostData) {
       <div className={styles.title}>
         {postData.title}
       </div>
+      <div className={styles.date}>
+        {postData.date.year} {postData.date.month} {postData.date.day} {postData.date.hour} : {postData.date.minute}
+      </div>
       <ReactMarkdown>
         {postData.content}
       </ReactMarkdown>

@@ -1,10 +1,15 @@
 .post {
   padding: 2rem;
   font-size: 1.3rem;
+  max-width: 1100px;
 }
 
 .title {
   padding: 1rem 0 1rem;
   font-size: 4rem;
   font-weight: bold;
+}
+
+.date {
+  font-size: 1.2rem;
 }

@@ -1,4 +1,7 @@
 .layoutDark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   min-height: 100vh;
   color-scheme: dark;
   background-color: rgb(35, 35, 35);
@@ -7,6 +10,9 @@
 }
 
 .layoutWhite {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   min-height: 100vh;
   color-scheme: white;
   background-color: white;

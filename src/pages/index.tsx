@@ -85,6 +85,9 @@ export default function Home({ postsData }: { postsData: IPostCardData[] }) {
                   <p>
                     {post.description}
                   </p>
+                  <p>
+                    {post.date.year} {post.date.month} {post.date.day}
+                  </p>
                 </div>
               </Link>
             )
