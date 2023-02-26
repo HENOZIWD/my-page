@@ -6,6 +6,7 @@ import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import Head from 'next/head';
 
 export async function getStaticPaths() {
   const postsId = await getAllpostsId();
@@ -27,6 +28,10 @@ export async function getStaticProps({ params }: { params: { id: string } }) {
 export default function Post(postData: IPostData) {
 
   return (
+    <>
+    <Head>
+      <title>{`${postData.title} - Like a Diamond`}</title>
+    </Head>
     <div className={styles.post}>
       <Link
         href='/'
@@ -65,5 +70,6 @@ export default function Post(postData: IPostData) {
         {postData.content}
       </ReactMarkdown>
     </div>
+    </>
   )
 }
