@@ -42,7 +42,7 @@ export async function getAllPostsData() {
         year: +matterResult.data.year,
         month: +matterResult.data.month,
         day: +matterResult.data.day,
-        hour: +matterResult.data.month,
+        hour: +matterResult.data.hour,
         minute: +matterResult.data.minute
       }
     }
@@ -94,7 +94,7 @@ export async function getPostData(id: string): Promise<IPostData> {
       year: matterResult.data.year,
       month: matterResult.data.month,
       day: matterResult.data.day,
-      hour: matterResult.data.month,
+      hour: matterResult.data.hour,
       minute: matterResult.data.minute
     }
   }

@@ -33,7 +33,7 @@ export default function Home({ postsData }: { postsData: IPostCardData[] }) {
       <div className={isThemeDark ? styles.dark : styles.white}>
         <div className={styles.profile}>
           <Image 
-            src={isThemeDark ? "/github-mark-white.svg" : "/github-mark.svg"}
+            src="/favicon.ico"
             alt="err"
             width={200}
             height={200}
