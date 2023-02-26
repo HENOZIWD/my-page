@@ -57,7 +57,7 @@ Vue.js와 Angular는 유사한 느낌이고 React는 달랐다. 나머지 두 �
     
 - Angular
     
-    <img src="/posts/Reasons-for-choosing-React/Angular-tutorial.jpg" alt="err" width="100%" height="100%">
+    <img src="/posts/Reasons-for-choosing-React/Angular-tutorial-1.jpg" alt="err" width="100%" height="100%">
     
     > [https://angular.io/start](https://angular.io/start)
     > 
