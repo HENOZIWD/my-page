@@ -19,3 +19,13 @@
   color: black;
   transition: 0.5s;
 }
+
+@media (max-width: 700px) {
+  .layoutDark {
+    display: block;
+  }
+  
+  .layoutWhite {
+    display: block;
+  }
+}
