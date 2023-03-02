@@ -73,8 +73,8 @@ export default function Home({ postsData }: { postsData: IPostCardData[] }) {
                 >
                   <div className={styles.thumbnail}>
                     <Image
-                      src="/favicon.ico"
-                      alt="err"
+                      src={`/posts/${post.id}/thumbnail/${post.thumbnail}`}
+                      alt={post.thumbnail}
                       fill
                       style={{ objectFit: 'contain' }}
                     />

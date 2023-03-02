@@ -19,6 +19,7 @@ export interface IPostData {
 
 export interface IPostCardData {
   id: string;
+  thumbnail: string;
   title: string;
   description: string;
   date: IDateData;
@@ -26,16 +27,20 @@ export interface IPostCardData {
 
 const postDir = path.join(process.cwd(), "resources");
 
-export async function getAllPostsData() {
+export async function getAllPostsData(): Promise<IPostCardData[]> {
   const postFileNames: string[] = fs.readdirSync(postDir);
   const allPostsData: IPostCardData[] = postFileNames.map((fileName: string): IPostCardData => {
     const fullPath: string = path.join(postDir, fileName);
+    const fileNameWithoutExtension = fileName.replace(/\.md$/, '');
     const postContents: string = fs.readFileSync(fullPath, "utf8");
+    const thumbnailPath = path.join(process.cwd(), "public", "posts", fileNameWithoutExtension, "thumbnail");
+    const thumbnail = fs.readdirSync(thumbnailPath);
 
     const matterResult = matter(postContents);
 
     return {
-      id: fileName.replace(/\.md$/, ''),
+      id: fileNameWithoutExtension,
+      thumbnail: thumbnail.length > 0 ? thumbnail[0] : "none",
       title: matterResult.data.title,
       description: matterResult.data.description,
       date: {

@@ -4,7 +4,7 @@
   align-items: center;
   min-height: 100vh;
   color-scheme: dark;
-  background-color: rgb(35, 35, 35);
+  background-color: rgb(var(--dark-rgb));
   color: white;
   transition: 0.5s;
 }
@@ -15,7 +15,7 @@
   align-items: center;
   min-height: 100vh;
   color-scheme: white;
-  background-color: white;
+  background-color: rgb(var(--white-rgb));
   color: black;
   transition: 0.5s;
 }

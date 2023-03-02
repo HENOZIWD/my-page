@@ -81,6 +81,11 @@
   src: url('../../public/fonts/Quicksand/Quicksand-Bold.ttf');
 }
 
+:root {
+  --white-rgb: 220, 220, 220;
+  --dark-rgb: 35, 35, 35;
+}
+
 
 
 * {
