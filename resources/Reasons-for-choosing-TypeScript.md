@@ -32,7 +32,7 @@ console.log(a+b); // '11'
 
 JavaScript를 주로 사용한 적은 없어서 직접적인 비교는 할 수 없지만, 오류 수정은 물론이고 TypeScript를 사용하면서 React 컴포넌트들을 다룰 때 주고받는 props 라든지, event의 타입이라든지, 비동기 구문을 사용할 때 Promise가 반환되는 지점이 어디인지 등을 명시적으로 나타낼 수 있어 편리했다.
 
-https://github.com/DefinitelyTyped/DefinitelyTyped를 통한 npm 패키지들의 type들도 손쉽게 적용이 가능한 점도 생산성 증가에 상당히 큰 도움을 주었다.
+[DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)를 통한 npm 패키지들의 type들도 손쉽게 적용이 가능한 점도 생산성 증가에 상당히 큰 도움을 주었다.
 
 # 3. 결론: 굳이 JavaScript..?
 
