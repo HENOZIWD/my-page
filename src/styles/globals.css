@@ -82,17 +82,12 @@
 }
 
 :root {
-  --white-rgb: 220, 220, 220;
-  --dark-rgb: 35, 35, 35;
-}
-
-
-
-* {
-  font-family: "IBMPlexSansKR", "Quicksand", sans-serif;
+  --day-rgb: 220, 220, 220;
+  --night-rgb: 35, 35, 35;
 }
 
 html, body {
   margin: 0px;
   padding: 0px;
+  font-family: "IBMPlexSansKR", "Quicksand", sans-serif;
 }

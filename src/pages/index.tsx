@@ -20,7 +20,7 @@ export async function getStaticProps() {
 
 export default function Home({ postsData }: { postsData: IPostCardData[] }) {
 
-  const isThemeDark = useThemeContext();
+  const isThemeNight = useThemeContext();
 
   return (
     <>
@@ -30,7 +30,7 @@ export default function Home({ postsData }: { postsData: IPostCardData[] }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={isThemeDark ? styles.dark : styles.white}>
+      <div className={isThemeNight ? styles.night : styles.day}>
         <div className={styles.profile}>
           <Image 
             src="/favicon.ico"
@@ -51,7 +51,7 @@ export default function Home({ postsData }: { postsData: IPostCardData[] }) {
               rel="noopener noreferrer"
             >
               <Image 
-                src={isThemeDark ? "/github-mark-white.svg" : "/github-mark.svg"}
+                src={isThemeNight ? "/github-mark-white.svg" : "/github-mark.svg"}
                 alt="err"
                 width={20}
                 height={20}

@@ -1,4 +1,4 @@
-.white {
+.day {
   color-scheme: white;
 }
 
@@ -29,7 +29,7 @@
 
 .grid a :hover {
   /* transform: scale(1.01);  */
-  background-color: rgb(var(--dark-rgb));
+  background-color: rgb(var(--night-rgb));
   color: white;
   transition: 0.3s;
 }
@@ -59,7 +59,7 @@
   height: 100%;
 }
 
-@media (min-width: 701px) and (max-width: 950px) {
+@media (min-width: 701px) and (max-width: 1000px) {
   .grid {
     padding: 2rem;
     display: grid;
@@ -92,17 +92,17 @@
 }
 
 /* Dark Mode */
-.dark {
+.night {
   color-scheme: dark;
 }
 
-.dark .grid a {
+.night .grid a {
   color: white;
 }
 
-.dark .grid a :hover {
+.night .grid a :hover {
   /* transform: scale(1.01);  */
-  background-color: rgb(var(--white-rgb));
+  background-color: rgb(var(--day-rgb));
   color: black;
   transition: 0.3s;
 }

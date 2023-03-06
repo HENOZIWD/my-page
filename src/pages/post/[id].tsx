@@ -33,11 +33,6 @@ export default function Post(postData: IPostData) {
       <title>{`${postData.title} - Like a Diamond`}</title>
     </Head>
     <div className={styles.post}>
-      <Link
-        href='/'
-      >
-        Back to Home
-      </Link>
       <div className={styles.title}>
         {postData.title}
       </div>

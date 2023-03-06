@@ -1,31 +1,54 @@
-.layoutDark {
+.layoutNight {
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
   color-scheme: dark;
-  background-color: rgb(var(--dark-rgb));
+  background-color: rgb(var(--night-rgb));
   color: white;
   transition: 0.5s;
 }
 
-.layoutWhite {
+.layoutDay {
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
   color-scheme: white;
-  background-color: rgb(var(--white-rgb));
+  background-color: rgb(var(--day-rgb));
   color: black;
   transition: 0.5s;
 }
 
-@media (max-width: 700px) {
-  .layoutDark {
+.toggleButton {
+  border-radius: 9999px;
+}
+
+.layoutHeader {
+  display: flex;
+  flex-direction: row;
+  position: sticky;
+  background-color: inherit;
+  justify-content: center;
+  top: 0px;
+  width: 100vw;
+}
+
+.layoutTitle {
+  display: flex;
+  font-size: 1.7rem;
+  font-weight: bold;
+  align-items: center;
+  text-decoration: none;
+  margin: 0 20px;
+}
+
+@media (max-width: 1100px) {
+  .layoutNight {
     display: block;
   }
   
-  .layoutWhite {
+  .layoutDay {
     display: block;
   }
 }
