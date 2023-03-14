@@ -7,6 +7,7 @@ import rehypeRaw from 'rehype-raw';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import Head from 'next/head';
+import { useThemeContext } from '@/components/layout';
 
 export async function getStaticPaths() {
   const postsId = await getAllpostsId();
@@ -27,10 +28,16 @@ export async function getStaticProps({ params }: { params: { id: string } }) {
 
 export default function Post(postData: IPostData) {
 
+  const isThemeNight = useThemeContext();
+
   return (
     <>
     <Head>
       <title>{`${postData.title} - Like a Diamond`}</title>
+      <meta name="description" content="HENOZIWD's personal page" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="theme-color" content={isThemeNight ? "#232323" : "#dcdcdc"} />
+      <link rel="icon" href="/favicon.ico" />
     </Head>
     <div className={styles.post}>
       <div className={styles.title}>

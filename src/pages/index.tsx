@@ -28,6 +28,7 @@ export default function Home({ postsData }: { postsData: IPostCardData[] }) {
         <title>Like a Diamond</title>
         <meta name="description" content="HENOZIWD's personal page" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content={isThemeNight ? "#232323" : "#dcdcdc"} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={isThemeNight ? styles.night : styles.day}>
@@ -71,14 +72,14 @@ export default function Home({ postsData }: { postsData: IPostCardData[] }) {
                   key={post.id}
                   className={styles.card}
                 >
-                  <div className={styles.thumbnail}>
+                  {post.thumbnail !== "none" && <div className={styles.thumbnail}>
                     <Image
                       src={`/posts/${post.id}/thumbnail/${post.thumbnail}`}
                       alt={post.thumbnail}
                       fill
                       style={{ objectFit: 'contain' }}
                     />
-                  </div>
+                  </div>}
                   <h3>
                     {post.title}
                   </h3>
