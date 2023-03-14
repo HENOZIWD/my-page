@@ -72,23 +72,13 @@ export default function Home({ postsData }: { postsData: IPostCardData[] }) {
                   key={post.id}
                   className={styles.card}
                 >
-                  {post.thumbnail !== "none" && <div className={styles.thumbnail}>
-                    <Image
-                      src={`/posts/${post.id}/thumbnail/${post.thumbnail}`}
-                      alt={post.thumbnail}
-                      fill
-                      style={{ objectFit: 'contain' }}
-                    />
-                  </div>}
                   <h3>
                     {post.title}
                   </h3>
-                  <p>
-                    {post.description}
-                  </p>
-                  <p>
-                    {post.date.year} {post.date.month} {post.date.day}
-                  </p>
+                  <div>
+                    <div>{post.description}</div>
+                    <div>{post.date.year} {post.date.month} {post.date.day}</div>
+                  </div>
                 </div>
               </Link>
             )
